@@ -48,6 +48,11 @@ func (p *servicePackage) SDKDataSources(ctx context.Context) []*types.ServicePac
 			Name:     "Kafka Version",
 		},
 		{
+			Factory:  dataSourceServerlessCluster,
+			TypeName: "aws_msk_serverless_cluster",
+			Name:     "Serverless Cluster",
+		},
+		{
 			Factory:  dataSourceVPCConnection,
 			TypeName: "aws_msk_vpc_connection",
 			Name:     "VPC Connection",
